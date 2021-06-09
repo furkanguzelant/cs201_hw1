@@ -1,0 +1,32 @@
+# depslib dependency file v1.0
+1615033276 source:c:\users\casper\onedrive\masaüstü\cs201\hw1\column.cpp
+
+1618839122 source:c:\users\casper\onedrive\masaüstü\cs201\hw1\moviebookingsystem.cpp
+	"MovieBookingSystem.h"
+	<ctime>
+	<iostream>
+	<sstream>
+	<string>
+
+1616412525 c:\users\casper\onedrive\masaüstü\cs201\hw1\moviebookingsystem.h
+	<string>
+
+1615032590 source:c:\users\casper\onedrive\masaüstü\cs201\hw1\movie.cpp
+
+1614873091 c:\users\casper\onedrive\masaüstü\cs201\hw1\column.cpp
+
+1615032590 c:\users\casper\onedrive\masaüstü\cs201\hw1\movie.cpp
+
+1616337603 source:c:\users\casper\onedrive\masaüstü\cs201\hw1\main.cpp
+	<iostream>
+	"MovieBookingSystem.h"
+
+1614981348 source:c:\users\casper\onedrive\masaüstü\cs201\hw1\seat.cpp
+
+1616337017 c:\users\casper\onedrive\masaüstü\cs201\hw1\movie.h
+	<string>
+
+1616337496 c:\users\casper\onedrive\masaüstü\cs201\hw1\reservation.h
+	"Movie.h"
+	<string>
+

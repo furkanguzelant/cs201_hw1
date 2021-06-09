@@ -1,0 +1,116 @@
+/**
+ * @author Furkan Güzelant ID: 21901515
+ * @version 21.03.2021
+
+*/
+#include <iostream>
+#include "MovieBookingSystem.h"
+using namespace std;
+
+int main () {
+    MovieBookingSystem M;
+    int* codes = new int[2];
+    M.showAllMovies();
+    cout << endl;
+
+    M.addMovie(1614791273,0);
+    M.cancelMovie(1614791273);
+    M.showAllMovies();
+    M.addMovie(1614801273,3);
+    M.addMovie(1615801273,1);
+    cout << endl;
+
+    M.showAllMovies();
+    cout << endl;
+
+    M.addMovie(1614791273,2);
+    cout << endl;
+
+    M.addMovie(1614791531,8);
+    cout << endl;
+
+    codes[1] = M.makeReservation(1614801273,1,'A');
+    codes[0] = M.makeReservation(1614801273,9,'A');
+    M.cancelMovie(1614801273);
+    M.showMovie(1614801273);
+    M.showReservation( codes[0] );
+
+    M.addMovie(1614801273,3);
+
+    codes[1] = M.makeReservation(1614801273,1,'A');
+    codes[0] = M.makeReservation(1614801273,9,'A');
+    M.showMovie(1614801273);
+    M.cancelReservations(2, codes);
+    M.showMovie(1614801273);
+
+    M.makeReservation(1614801273,17,'A');
+    M.makeReservation(1614801273,11,'C'); // Not occupiable
+    M.makeReservation(1614801273,17,'A'); // Not available
+    codes[1] = M.makeReservation(1614801273,9,'Q');
+    codes[0] = M.makeReservation(1614801273,17,'Q');
+    M.showMovie(1614801273);
+    M.cancelReservations(2, codes);
+    M.showMovie(1614801273);
+
+
+    cout<<endl;
+
+    codes[0] = M.makeReservation(1614801273,5,'A');
+    cout<<endl;
+    M.makeReservation(1614801274,5,'M'); //No movie
+    cout <<endl;
+
+    codes[1] = M.makeReservation(1614791273,1,'A');
+     M.showMovie(1614791273);
+
+    M.showMovie(1614801273);
+    cout<<endl;
+    M.showMovie(1614801274);
+    cout<<endl;
+
+    M.showReservation( codes[0] );
+    cout<<endl;
+    M.cancelReservations(2, codes);
+    M.cancelReservations(2, codes);
+    M.showMovie(1614801273);
+    M.showMovie(1614791273);
+    cout<<endl;
+
+    codes[0] = M.makeReservation(1614801273,1,'A');
+    M.makeReservation(1614801273,1,'A');
+    M.makeReservation(1614801273,5,'E');
+    M.makeReservation(1614801273,5,'M');
+    M.showAllMovies();
+    cout<<endl;
+
+    codes[1] = -1;
+    M.cancelReservations(2, codes);
+    M.showReservation( codes[0] );
+    cout<<endl;
+
+    codes[1] = M.makeReservation(1615801273,13,'C');
+    M.cancelReservations(2, codes);
+
+    M.makeReservation(1614801273,12,'D');
+    cout<<endl;
+    M.showMovie(1614801273);
+    cout<<endl;
+
+    M.cancelMovie(1614801273);
+    M.showAllMovies();
+    M.showReservation( codes[0] );
+    M.makeReservation(1614801273,12,'D');
+    M.cancelReservations(2, codes);
+
+    cout<<endl;
+
+    M.cancelMovie(1614801273);
+    M.cancelMovie(1615801273);
+    M.addMovie(1614801273,4);
+    M.makeReservation(1614801273,12,'D');
+    M.makeReservation(1614801273,21,'K');
+    M.showMovie(1614801273);
+    M.showAllMovies();
+    delete[] codes;
+    return 0;
+}
